@@ -13,5 +13,5 @@
 тут будут описаны возможности
 
 ## ссылка на сайт
-ссылка : (https://github.com/ba0baber/myproject07.git)
+ссылка : (https://ba0baber.github.io/myproject07/)
 
