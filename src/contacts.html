@@ -23,7 +23,7 @@
         </nav> <!-- Скопируйте весь блок <header> из index.html -->
     </header>
 
-    <main>s
+    <main>
         <!-- Простые "хлебные крошки" -->
         <nav aria-label="Хлебные крошки">
             <a href="index.html">Главная</a> →
@@ -36,15 +36,22 @@
             <p>тг: татарский футбол или по номеру телефона: +7 (923) 456-78-90</p>
         </section>
         <h1>Форма обратной связи</h1>
-        <from>
+        
+        
+        
+        
+            
+        
+        
+        <from id="ContactFrom">
             <label for="username">ваше имя:</label>
-            <input type="text" id="'username" name="username"> 
+            <input type="text" id="'username" name="username" required> 
             
             <label for="phone">ваше номер телефона:</label>
-            <input type="text" id="phone" name="phone">
+            <input type="text" id="phone" name="phone" required>
             
             <label for="e-mail">ваш e-mail:</label>
-            <input type="text" id="e-mail" name="e-mail">
+            <input type="text" id="e-mail" name="e-mail" required>
             
             <label for="course">ваш курс:</label>
             <select id="course" name="course">
@@ -57,7 +64,7 @@
             </select>
 
             <label for="message">ваше обращение</label>
-            <textarea id="message" name="message" rows="6"></textarea>
+            <textarea id="message" name="message" rows="6" required></textarea>
             <button type="submit" id="submit" name="submit">отправить</button>
             <button type="reset" id="reset" name="reset">отчистить</button>
 

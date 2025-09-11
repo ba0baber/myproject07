@@ -44,3 +44,11 @@ button:hover{
     background-color: aqua;
     color: black;
 }
+
+#ContactForm{
+    border: 3px purple;
+    border-radius: 10px;
+    background-color: aqua;
+    padding: 10px ;
+    max-width: 250px;
+}
