@@ -1,46 +1,41 @@
-const form = document.getElementById('ContactForm');
-const emailInnput = document.getElementById('e-mail');
+const form=document.getElementById('ContactForm');  //получаем элемент формы
+const emailInput=document.getElementById('e-mail');//получаем поле ввода email
+const button=document.getElementById('Submit');
 
-emailInnput .addEventListener('input', validateEmail);
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  validateEmail()
+}); //на событие ввода email будет вызываться функция validateEmail()
 
 function validateEmail(){
-    const emailRegex = /[A-Za-z0-9_-\.]{2,10}@[a-z0-9\.-_]{1,10}\.[a-z]{2,3}/;
-    if (emailRegex.test(emailInnput.value))
-    {
-        removeError(emailInnput);
-        return true;
+  //функция проверки корректности email
+  const emailRegex=/[A-Za-z0-9_\-\.]{2,10}@[a-z0-9\.\-_]{1,10}\.[a-z]{2,3}/;
+  if(emailRegex.test(emailInput.value)){
+    removeError(emailInput);
+    return True;
 
-    }
-    else
-    {
-        showError(emailInnput, "Email не соответсвует формату. Пример: ivanov@mail.ru");
-        return false;
-    }
+  }
+  else{
+    showError(emailInput, "Email не соответствует формату. Пример: ivanov@mail.ru");
+    return false;
+  }
 }
+function showError(input, message){   //функция показа ошибки
+  const formControl = input.parentElement;  //получаем родительскую форму
+  const errorElement = formControl.querySelector('error') || document.createElement('div');
 
-function showError(inpput, message){
-    const formControl = input.parentElement;
-    const errorElement = formControl.querySelector('.error') || document.createElement('div');
+  errorElement.className='error';
+  errorElement.textContent = message;
 
-    errorElement.class ='error';
-    errorElement.textContent = message;
-    
-    formControl.appendChils(errorElement);
-    input.style.borderColor = 'red';
-            
-        
-    
-    
+  formControl.appendChild(errorElement);
+  input.style.borderColor = 'red';
 }
+function removeError(input){    //функция скрытия ошибки
+  const formControl = input.parentElement;
+  const errorElement = formControl.querySelector('error');
 
-function removeError(input){
-    const formControl = input.parentElement;
-    const errorElement = formControl.querySelector('.error');
-
-    if(errorElement)
-    {
-        formControl.removeChild(errorElement);
-
-    }
-    input.style.borderColor = 'green';
+  if(errorElement){
+    formControl.removeChild(errorElement);
+  }
+  input.style.borderColor = 'green';
 }
