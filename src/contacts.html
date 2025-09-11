@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Главная - татарский футбол</title>
     <meta name="description" content="Краткое описание главной страницы вашего сайта">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon"> <!-- Скопируйте весь блок <head> из index.html -->
     <title>О нас - татарский футбол</title>
     <meta name="description" content="Узнайте больше о нашей компании и истории">
+    <link rel="icon" href="../assets/favicon.ico" type="image/x-icon"> <!-- Скопируйте весь блок <head> из index.html -->
+    <link rel="stylesheet" href="../static/style.css">
 </head>
 <body>
     <header>
@@ -34,6 +35,34 @@
             <h2>где нас найти</h2>
             <p>тг: татарский футбол или по номеру телефона: +7 (923) 456-78-90</p>
         </section>
+        <h1>Форма обратной связи</h1>
+        <from>
+            <label for="username">ваше имя:</label>
+            <input type="text" id="'username" name="username"> 
+            
+            <label for="phone">ваше номер телефона:</label>
+            <input type="text" id="phone" name="phone">
+            
+            <label for="e-mail">ваш e-mail:</label>
+            <input type="text" id="e-mail" name="e-mail">
+            
+            <label for="course">ваш курс:</label>
+            <select id="course" name="course">
+                <option value="no">не выбрано</option>
+                <option value="1">1 курс</option>
+                <option value="2">2 курс</option>
+                <option value="3">3 курс</option>
+                <option value="4">4 курс</option>
+                <option value="other">другой</option>
+            </select>
+
+            <label for="message">ваше обращение</label>
+            <textarea id="message" name="message" rows="6"></textarea>
+            <button type="submit" id="submit" name="submit">отправить</button>
+            <button type="reset" id="reset" name="reset">отчистить</button>
+
+        </from>
+
         <section>
             <h2>Наша команда</h2>
             <p>закалка татарским футболом</p>
